@@ -13,15 +13,17 @@ setInterval(() => {
         return
     }
 
-    const btn = document.querySelector("body > div.grayed > div > div.row > div > div > section > div > div:nth-child(2) > div:nth-child(2) > div.col-md-8 > div > section > div.cards-block > ul > li:nth-child(10) > button")
+    const btn = document.querySelector("div.cards-block > ul > li:nth-child(10) > button")
 
     if (btn) {
-        listItem = document.querySelector("body > div.grayed > div > div.row > div > div > section > div > div:nth-child(2) > div:nth-child(2) > div.col-md-8 > div > section > div.cards-block > ul > li")
+        listItem = document.querySelector("div.cards-block > ul > li")
         if (!listItem.classList.contains("active")) {
+            console.debug("clicking coffee button")
             btn.click()
-            //console.log("clicking coffee")
+        } else {
+            console.debug("coffee already selected skipping click")
         }
     } else {
-        console.warn("button not found")
+        console.info("Coffee button not found! 😮")
     }
 }, 5000)

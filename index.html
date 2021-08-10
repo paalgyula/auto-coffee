@@ -13,18 +13,13 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-        const setEnabled = () => {
-            var checkBox = document.getElementById("ac-checkbox");
-            chrome.storage.local.set({ enabled: checkBox.checked });
-        }
-    </script>
+    <script type="text/javascript" src="src/popup.js"></script>
     <h3>Enable or disable auto-coffee function</h3>
     <div class="padded-content">
         <img src="assets/playing-cards.png" align="right" height="32"/>
         <div>
             <label for="ac-checkbox">Enable auto-coffee</label>
-            <input id="ac-checkbox" type="checkbox" onClick="setenabled()" />
+            <input id="ac-checkbox" type="checkbox" onClick="setEnabled()" />
         </div>
     </div>
 </body>
