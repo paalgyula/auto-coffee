@@ -4,6 +4,8 @@
 console.log("Auto coffee script started!")
 var enabled = false
 
+console.log("Storage: ", chrome.storage.local)
+
 setInterval(() => {
     chrome.storage.local.get('enabled', data => {
         enabled = !!data.enabled;

@@ -19,5 +19,8 @@
                 "https://www.planitpoker.com/*"
             ]
         }
+    ],
+    "permissions": [
+        "storage"
     ]
 }
